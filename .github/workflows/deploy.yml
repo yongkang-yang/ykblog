@@ -1,0 +1,66 @@
+name: Deploy Hexo Blog
+
+on:
+  push:
+    branches:
+      - master  # or master, depending on your default branch name
+    paths:
+      - 'source/**'  # Trigger only when files in the source directory change
+      - 'themes/**'  # Or when theme files change
+      - '_config.yml'  # Or when config changes
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          submodules: true   # Fetch submodules (themes, etc.)
+          fetch-depth: 0    # Fetch all history for .git info
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'  # Use the Node.js version you're using locally
+          
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: |
+          npm install -g hexo-cli
+          
+
+      - name: Install landscape theme
+        run: |
+          # Check if theme is already installed
+          if [ ! -d "themes/landscape" ]; then
+            git clone https://github.com/silkiller/hexo-theme-oasis_updated.git themes/oasis
+          fi
+          
+          # Install theme dependencies
+          cd themes/oasis
+          npm install
+          cd ../..
+          
+
+      - name: Generate static files
+        run: hexo clean && hexo generate
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          external_repository: yongkang-yang/yongkang-yang.github.io  # Your GitHub Pages repository
+          publish_branch: master  # The branch where your site is published
+          publish_dir: ./public  # Directory with the generated content
+          commit_message: ${{ github.event.head_commit.message }}  # Use the same commit message
+          full_commit_message: ${{ github.event.head_commit.message }}
+          user_name: 'github-actions[bot]'
+          user_email: '41898282+github-actions[bot]@users.noreply.github.com'
