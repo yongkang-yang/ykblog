@@ -40,7 +40,7 @@ jobs:
       - name: Install landscape theme
         run: |
           # Check if theme is already installed
-          if [ ! -d "themes/landscape" ]; then
+          if [ ! -d "themes/oasis" ]; then
             git clone https://github.com/silkiller/hexo-theme-oasis_updated.git themes/oasis
           fi
           
