@@ -42,7 +42,7 @@ jobs:
         run: |
           # Check if theme is already installed
           if [ ! -d "themes/oasis" ]; then
-            git clone https://github.com/silkiller/hexo-theme-oasis_updated.git themes/oasis
+            git clone https://github.com/silkiller/hexo-theme-johan.git themes/oasis
           fi
           
           # Install theme dependencies
