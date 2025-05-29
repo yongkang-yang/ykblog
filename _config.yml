@@ -12,7 +12,7 @@ language: en
 timezone: ''
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+## Set your site url here.. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://yongkang-yang.github.io
 root: /
 permalink: posts/:abbrlink/  # 此处可以自己设置，也可以直接使用 /:abbrlink  posts也可改也可以去掉
