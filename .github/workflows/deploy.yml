@@ -42,11 +42,11 @@ jobs:
         run: |
           # Check if theme is already installed
           if [ ! -d "themes/oasis" ]; then
-            git clone https://github.com/yongkang-yang/hexo-papermod.git themes/PaperMod
+            git clone https://github.com/yongkang-yang/hexo-papermod.git themes/papermod
           fi
           
           # Install theme dependencies
-          cd themes/PaperMod
+          cd themes/papermod
           npm install
           cd ../..
           
