@@ -10,7 +10,7 @@ date: 2024-09-01 21:34:24
 ---
 
 
-Some useful prompts for academic writing from a recent article in Nature Career Column.
+Some useful prompts for academic writing from a recent article in Nature Career Column..
 
 > The value that I derive from generative AI is not from the technology  itself blindly churning out text, but from engaging with the tool and  using my own expertise to refine what it produces. ——Dritjon Gruda
 >
