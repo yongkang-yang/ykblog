@@ -5,7 +5,6 @@ tags:
   - Thunderbird
   - Mailmerge
 categories: Software
-abbrlink: 
 date: 2025-12-05 18:14:07
 ---
 
