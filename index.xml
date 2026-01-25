@@ -8,7 +8,18 @@
 &lt;li&gt;&lt;strong&gt;The assistant&amp;rsquo;s personality&lt;/strong&gt;: A resourceful, helpful presence without the corporate fluff&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="setting-up-github-integration"&gt;Setting Up GitHub Integration&lt;/h2&gt;
-&lt;p&gt;One of the first real tasks was connecting Clawdbot to my GitHub account. This involved:&lt;/p&gt;</description></item><item><title>Forget about the MS mailmerge</title><link>https://yongkang-yang.github.io/ykblog/posts/forget-about-the-ms-mailmerge/</link><pubDate>Fri, 05 Dec 2025 18:14:07 +0000</pubDate><guid>https://yongkang-yang.github.io/ykblog/posts/forget-about-the-ms-mailmerge/</guid><description>&lt;p&gt;Just found out that the thunderbird has mailmerge service that is so much better than Microsoft word/outlook.&lt;/p&gt;</description></item><item><title>About Yongkang Yang</title><link>https://yongkang-yang.github.io/ykblog/about/</link><pubDate>Wed, 01 Jan 2025 00:08:23 +0000</pubDate><guid>https://yongkang-yang.github.io/ykblog/about/</guid><description>&lt;p&gt;莫见乎隐，莫显乎微，故君子慎其独也 ——《礼记·中庸》&lt;/p&gt;
+&lt;p&gt;One of the first real tasks was connecting Clawdbot to my GitHub account. This involved:&lt;/p&gt;</description></item><item><title>Forget about the MS mailmerge</title><link>https://yongkang-yang.github.io/ykblog/posts/forget-about-the-ms-mailmerge/</link><pubDate>Fri, 05 Dec 2025 18:14:07 +0000</pubDate><guid>https://yongkang-yang.github.io/ykblog/posts/forget-about-the-ms-mailmerge/</guid><description>&lt;p&gt;Just found out that Thunderbird has a mailmerge service that is so much better than Microsoft Word/Outlook. Here&amp;rsquo;s why you should make the switch.&lt;/p&gt;
+&lt;h2 id="the-problem-with-microsoft-mail-merge"&gt;The Problem with Microsoft Mail Merge&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;ve tried to use mail merge in Microsoft Office, you know the pain:&lt;/p&gt;
+&lt;h3 id="1-dependency-on-ms-word"&gt;1. Dependency on MS Word&lt;/h3&gt;
+&lt;p&gt;Microsoft&amp;rsquo;s mail merge is tightly coupled with Word. You need to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a Word document as your template&lt;/li&gt;
+&lt;li&gt;Link it to your data source (Excel, Outlook contacts, etc.)&lt;/li&gt;
+&lt;li&gt;Navigate through multiple menus and wizards&lt;/li&gt;
+&lt;li&gt;Deal with formatting issues between Word and your email client&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This dependency makes the whole process unnecessarily complex, especially if you just want to send personalized emails.&lt;/p&gt;</description></item><item><title>About Yongkang Yang</title><link>https://yongkang-yang.github.io/ykblog/about/</link><pubDate>Wed, 01 Jan 2025 00:08:23 +0000</pubDate><guid>https://yongkang-yang.github.io/ykblog/about/</guid><description>&lt;p&gt;莫见乎隐，莫显乎微，故君子慎其独也 ——《礼记·中庸》&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;There is nothing more visible than what is secret, and nothing more manifest than what is minute.
 Therefore the superior man is watchful over himself, when he is alone.&amp;rdquo;&lt;/p&gt;</description></item><item><title>Exploring the Potential of NotebookLM for Researchers</title><link>https://yongkang-yang.github.io/ykblog/posts/exploring-the-potential-of-notebooklm-for-researchers/</link><pubDate>Fri, 06 Dec 2024 15:41:58 +0000</pubDate><guid>https://yongkang-yang.github.io/ykblog/posts/exploring-the-potential-of-notebooklm-for-researchers/</guid><description>&lt;p&gt;&lt;a href="https://labs.google/notebooklm"&gt;NotebookLM&lt;/a&gt;, a new innovation from &lt;a href="https://labs.google/"&gt;Google Labs&lt;/a&gt;, is described as:&lt;/p&gt;
 &lt;blockquote&gt;
