@@ -1,13 +1,16 @@
-name: Deploy Hexo Blog
+name: Deploy Hugo Blog
 
 on:
   push:
     branches:
-      - master  # or master, depending on your default branch name
+      - master  # or main, depending on your default branch name
     paths:
-      - 'source/**'  # Trigger only when files in the source directory change
+      - 'content/**'  # Trigger when content changes
       - 'themes/**'  # Or when theme files change
-      - '_config.yml'  # Or when config changes
+      - 'hugo.toml'  # Or when config changes
+      - 'archetypes/**'
+      - 'static/**'
+      - 'layouts/**'
 
 jobs:
   build-and-deploy:
@@ -19,40 +22,14 @@ jobs:
           submodules: true   # Fetch submodules (themes, etc.)
           fetch-depth: 0    # Fetch all history for .git info
           
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
         with:
-          node-version: '16'  # Use the Node.js version you're using locally
-          
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          hugo-version: 'latest'
+          extended: true  # Use Hugo extended version for SCSS support
 
-      - name: Install dependencies
-        run: |
-          npm install
-          npm install -g hexo-cli
-          
-
-      - name: Install theme
-        run: |
-          # Check if theme is already installed
-          if [ ! -d "themes/oasis" ]; then
-            git clone https://github.com/silkiller/hexo-theme-johan.git themes/oasis
-          fi
-          
-          # Install theme dependencies
-          cd themes/oasis
-          npm install
-          cd ../..
-          
-
-      - name: Generate static files
-        run: hexo clean && hexo generate
+      - name: Build Hugo site
+        run: hugo --minify
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
